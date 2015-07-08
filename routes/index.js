@@ -31,9 +31,9 @@ router.get('/like', function(req, res) {
 router.get('/', function(req, res) {
 Info.findOne({infoName:"general"},function(err, info){
       if(info==null){
-        res.render('index', { redirect: 'index', likes: 1});
+        res.render('index', { redirect: 'home', likes: 1});
       } else {
-        res.render('index', { redirect: 'index', likes: info.likes});
+        res.render('index', { redirect: 'home', likes: info.likes});
       }
     });
 }); 
