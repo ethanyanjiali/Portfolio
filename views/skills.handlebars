@@ -1,0 +1,32 @@
+<script src="javascripts/d3.v3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/skill.css"/>
+<div class="skillsPage">
+	<div class="cover">
+		<span class="title">SKILLS.</span>
+		<div class="viewSkills">
+			<a href="#skills"><img class="viewSkillsImg" src="/images/viewskills.png"></img></a>
+		</div>
+		<img class="coverImg" src="/images/chongqing.png"></img>
+	</div>
+	<div class="skillsContent" id="skills">
+	    <div id="skillmap">
+	    	<h1 class="skillset">Yanjia's Skillset</h1>
+	        <div class="skills-wrapper">
+	        	<div id="skills-chart-breadcrumb"></div>
+	          	<div class="skills-sunburst"></div>
+	        </div>
+	      </div>
+
+	    </div>
+	</div>
+</div>
+<script type="text/javascript" src="javascripts/skillsdata.js"></script>
+<script type="text/javascript" src="javascripts/skill.js"></script>
+<script type="text/javascript">
+	// Hack to make this example display correctly in an iframe on bl.ocks.org
+	d3.select(self.frameElement).style("height", "700px");
+	$('a[href*=#]').on('click', function(event){     
+	    event.preventDefault();
+	    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+	});
+</script>

@@ -1,0 +1,888 @@
+/*
+*	Style sheet for Yanjia Li's portfolio
+*	Created on July 2015
+*	Author by Yanjia Li
+*	Thanks for W3Schools and SASS
+*/
+
+$midnightExpress: #191B28;
+$prussianBlue: #004563;
+$chinookGreen: #98CC96;
+$creamBrulee: #FFE9A3;
+$cinnabarRed: #EB3A25;
+
+$paddingVar: 15px 15px 15px 15px;
+
+$headerFont: "Impact";
+$textFont: "Eras ITC", "Eras Light ITC",  sans-serif;
+$transitionTime: 0.25s;
+
+body {
+	margin:0px;
+}
+h1 {
+	font-family: $textFont;
+	font-size: 2em;
+	font-weight: bold;
+	color:$midnightExpress;
+}
+h2 {
+	font-family: $textFont;
+	font-size: 1em;
+	font-weight: bold;
+	color:$midnightExpress;
+}
+h3 {
+	display: inline-block;
+	font-size: 1em;
+	font-family: $headerFont;
+	color:$midnightExpress;
+	font-weight: normal;
+}
+p {
+	font-family: $textFont;
+	font-size: 0.9em;
+	color:$midnightExpress;
+}
+.contentContainer{
+	transition:all 1s ease;
+	opacity: 0;
+}
+/*display:none conflicts with transition*/
+.loaderContainer{
+	visibility: visible;
+	position: absolute;
+	top:150px;
+	width:100%;
+	bottom:0px;
+	background:rgba( 255, 255, 255, 1 );
+	z-index:1002;
+	text-align: center;
+}
+.loader{
+	/*margin-top: 200px;*/
+	margin-top: 10%;
+	transition: all 0.5s ease;
+	opacity: 0;
+	visibility: hidden;
+}
+.loaderImg{
+	max-width: 100px;
+	width:10%;	
+}
+
+.divider {
+	border-bottom: solid;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left:20%;
+	width:70%;
+	border-color: #DDDDDD;
+	border-width: 0.1em;
+}
+.cover{
+	padding-top: 7%;
+}
+.coverImg {
+	width: 100%;
+}
+.title {
+	padding: 30px 0 0px 0;
+	display: block;
+	text-align: center;
+	color:$prussianBlue;
+	font-family: $headerFont;
+	font-size: 5em;
+	text-shadow: 5px 5px 10px #CCCCCC;
+}
+/***********************/
+/*Responsive           */
+/***********************/
+@media only screen and (max-width: 767px) {
+	#mail {
+		width:80% !important;
+		top:80% !important;
+		left:10% !important;
+	}
+	.projectsIcons{
+		margin-top:5% !important;
+	}
+	.icons {
+		margin-top:5% !important;
+	}
+	.viewSkills{
+		margin-top:5% !important;
+	}
+	.skillset{
+		display: none;
+	}
+	.intro.caption{
+		margin-bottom: 20% !important;
+	}
+	.intro.myname{
+		margin-top: 20% !important;
+	}
+	.homeCoverImg{
+		padding-top: 5% !important;
+	}
+	.title {
+		margin-top: 15% !important;
+		margin-bottom: 20% !important;
+	}
+	.loader{
+		margin-top: 20% !important;
+	}
+	.footerLink.blog {
+		display: none !important;
+	}
+	.aboutText {
+		margin:0 !important;
+	}
+	.amazonImg {
+		padding-top:25px !important;
+		padding-bottom:25px !important;
+		margin:auto !important;
+		display: block !important;
+	}
+	.cornellImg {
+		margin:auto !important;
+		display: block !important;
+	}
+	.cquImg {
+		margin:auto !important;
+		display: block !important;
+	}
+	.yanjiaImg {
+		padding-top:25px !important;
+		padding-bottom:25px !important;
+		margin:auto !important;
+		display: block !important;
+	}
+	.aboutSection {
+		margin-right: 8% !important;
+		margin-left: 8% !important;
+		text-align: center !important;
+	}
+	.location {
+		margin-right: 0 !important;
+		display: block !important;
+	}
+	.duration {
+		margin-left: 0 !important;
+		display: block !important;
+	}
+	.schoolName {
+		margin-right: 0 !important;
+		display: block !important;
+	}
+	.projIcon{
+		margin-right: 15px !important;
+	}
+	.projContent {
+		margin:0px !important;
+		display: block !important;
+		width:100% !important;
+		text-align: center !important;
+		float:none !important;
+	}
+	.projSection {
+		margin-right: 8% !important;
+		margin-left: 8% !important;
+	}
+	.projImg {
+		display: block !important;
+		margin:auto !important;
+		width: 50% !important;
+		float:none !important;
+	}
+	.verticalButton:hover{
+		transform: translate(0px,-10px) !important;
+	}
+	.verticalButton {
+		display: inline-block !important;
+	}
+	.verticalIcon {
+		 display:inline-block !important;
+	}
+	.verticalIcons1{
+		padding-top:10px;
+		left: 50% !important;
+		margin-left: -150px;
+	    top: 90% !important;
+	}
+	.verticalIcons2{
+		padding-top:10px;
+		margin-left: -200px;
+		left: 50% !important;
+	    top: 90% !important;
+	}
+	.logo {
+		height:115px;
+		left:50%;
+		position: absolute;
+		margin:30px 0 0 -75px !important;
+	}
+	.logoImg {
+		width: 150px !important;
+		height: 62px !important;
+	}
+	.msg1 {
+		font-size: 1em;
+	}
+	.msg2 {
+		display:none;
+	}
+}
+@media only screen and (min-width:768px) and (max-width: 975px) {
+	#mail {
+		width:74% !important;
+		top:80% !important;
+		left:13% !important;
+	}
+	.projImg.right {
+		margin-right:5% !important;
+	}
+	.projContent.right{
+		margin-right:5% !important;
+	}
+	.msg1 {
+		font-size: 1em;
+	}
+	.msg2 {
+		font-size: 1em;
+	}
+}
+@media only screen and (min-width:1090px) and (max-width: 1380px){
+	.msg1 {
+		font-size: 1.1em;
+	}
+	.msg2 {
+		font-size: 1.1em;
+	}
+}
+@media only screen and (min-width:1381px) {
+	.msg1 {
+		font-size: 1.4em;
+	}
+	.msg2 {
+		font-size: 1.4em;
+	}
+}
+/***********************/
+/*CSS for Footer       */
+/***********************/
+.likes{
+	background-color: white;
+	color:$prussianBlue;
+	font-weight: bold;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+}
+.footerLink{
+	padding:6px;
+	margin-left:5%;
+	margin-right:5%;
+	border:solid;
+	border-color: $prussianBlue;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+.footerLink:hover{
+	border-color: white;
+}
+.footerLinks{
+	padding-top:20px;
+}
+.copyright{
+	margin-top:30px;
+}
+.footer{
+	display: none;
+	font-family:$textFont;
+	color:white;
+	width: 100%;
+	height: 100px;
+	background-color: $prussianBlue;
+	text-align: center;
+}
+/***********************/
+/*CSS for Contact Page */
+/***********************/
+#contact {
+	visibility: hidden;
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+    height:100%;
+    text-align:center;
+    z-index: 1000;
+    opacity:0;
+    background-color:$prussianBlue;
+    transition: all 0.2s ease-in; 
+}
+#main {
+	margin:0;
+	padding:0;
+	transition: all 0.2s ease-in;
+}
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+#mail {
+	display: none;
+	width:60%;
+	@include aspect-ratio(16,10);
+	background-image: url("/images/mail.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	visibility: hidden;
+	position:absolute;
+	top:80%;
+	left:20%;
+	margin:auto;
+	opacity:0;
+	z-index: 1001;
+	transition: all 0.3s ease-in;
+}
+.mailContent {
+	position: absolute;
+	margin-top:-52%;
+	height:100%;
+}
+.portrait{
+	width:35%;
+	height:68%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+}
+.portraitImg{
+	margin-left: 20%;
+	margin-bottom: 10%;
+	border-radius: 15px;
+	width:50%;
+}
+.contactClose{
+	position: absolute;
+	bottom:12%;
+	right:8%;
+	max-width: 100px;
+	width:10%;
+	transition: all 0.1s ease-out;
+}
+.contactClose:active{
+	transform:scale(0.9,0.9);
+}
+.contactText{
+	margin-right: 5%;
+	width:50%;
+	height:100%;
+	text-align: left;
+	display: inline-block;
+	font-size: 1em;
+}
+.msg1{
+	margin-top: 15%;
+}
+.msg2{
+}
+.contactIcons{
+	margin-top: 1%;
+	margin-left: 19%;
+}
+.contactIcon{
+	width:25%;
+	max-width: 100px;
+	transition: all 0.2s ease;
+}
+.contactIcon:hover{
+	box-shadow: 0px 0px 10px 3px #CCCCCC;
+}
+/***********************/
+/*CSS for Projects Page*/
+/***********************/
+.verticalIcon {
+	display: block;
+	padding-bottom: 10px;
+	margin:0 20px;
+	width: 100%;
+	max-height: 50px;
+	max-width: 50px;
+	transition: all $transitionTime ease;
+	-webkit-filter: drop-shadow(5px 5px 5px #BBBBBB);
+	filter: drop-shadow(5px 5px 5px #BBBBBB); 
+}
+.verticalIcons2{
+	position:fixed;
+	left: 0;
+    top: 30%;
+    overflow:hidden;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+.githubLink {
+	display: inline-block;
+	max-width: 50px;
+	margin-top:20px;
+}
+.projSection {
+	display: block;
+	width:80%;
+	margin-left:20%;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	height: 100%;
+}
+.projSection:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.appstore{
+	display: inline-block;
+	max-width: 100px;
+	margin-top:20px;
+}
+.projImg.left {
+	float: left;
+}
+.projImg.right {
+	float:right;
+	margin-right:15%;
+}
+.projContent.left{ 
+	float: left;
+	display: inline-block;
+	width:45%;
+}
+.projContent.right{
+	float:right;
+	display: inline-block;
+	width:45%;
+	margin-right:15%;
+}
+.projTitle {
+	display: inline-block;
+	width: 75%;
+}
+.projTop {
+	margin-bottom: 20px;
+}
+.projImg{
+	display: inline-block;
+	border: solid 5px;
+	border-color: white;
+	margin: 20px 0 0;
+	box-shadow: 0px 0px 10px 3px #CCCCCC;
+	width:30%;
+	height:100%;
+	min-width: 250px;
+	max-width:400px;
+	vertical-align: top;
+	transition: all $transitionTime ease;
+}
+.projIcon{
+	border-radius: 10px;
+	display: inline-block;
+	width: 20%;
+	max-height: 50px;
+	max-width: 50px;
+	vertical-align: bottom;
+	margin-right: 2%;
+}
+.projectsIcons{
+	position:absolute;
+	text-align: center;
+	left:50%;
+	margin-left: -200px;
+	margin-top:10%;
+}
+/***********************/
+/*CSS for Skills Page  */
+/***********************/
+.skillset {
+	position: absolute;
+	margin:-5px 0 0 0;
+	right:2%;
+}
+.viewSkills{
+	position: absolute;
+	text-align: center;
+	left:50%;
+	transition: all $transitionTime ease;
+	margin-left: -75px;
+	margin-top:10%;
+}
+.viewSkillsImg{
+	width:100%;
+	max-width: 150px;
+	-webkit-filter: drop-shadow(5px 5px 5px #BBBBBB);
+	filter: drop-shadow(5px 5px 5px #BBBBBB); 
+}
+.viewSkills:hover{
+	transform: scale(1.1,1.1);
+	-webkit-filter: drop-shadow(1px 1px 5px #BBBBBB);
+	filter: drop-shadow(1px 1px 5px #BBBBBB); 
+}
+.viewSkills:active{
+	transform: scale(1,1);
+}
+/***********************/
+/*CSS for About Page   */
+/***********************/
+.yanjiaImg{
+	max-width: 100px;
+	max-height: 100px;
+	vertical-align: top;
+	padding-top:50px;
+}
+.verticalIcons1{
+	position:fixed;
+	left: 0px;
+    top: 30%;
+    overflow:hidden;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+.verticalButton{
+	transition: all $transitionTime ease;
+	margin-bottom: 40px;
+}
+.verticalButton:hover{
+	transform: translate(10px,0px);
+}
+.verticalButton:active .verticalIcon{
+	transform: scale(1.2,0.8);
+}
+.amazonImg{
+	max-width: 100px;
+	max-height: 100px;
+	vertical-align: top;
+	padding-top:50px;
+}
+.aboutSection{
+	width:80%;
+	margin-left:20%;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+.schoolName{
+	display: inline-block;
+	margin-right: 20px;
+}
+.location{
+	display: inline-block;
+	font-family: $textFont;
+	font-size: 0.8em;
+	color:$midnightExpress;
+	margin-right: 50px;
+}
+.duration{
+	display: inline-block;
+	font-family: $textFont;
+	font-size: 0.8em;
+	color:$midnightExpress;
+}
+.aboutText{
+	display: inline-block;
+	margin-left: 10%;
+	max-width:60%;
+}
+
+.cornellImg{
+	max-width: 100px;
+	max-height: 100px;
+	vertical-align: top;
+	padding-top:20px;
+}
+.cquImg{
+	max-width: 100px;
+	max-height: 100px;
+	vertical-align: top;
+	padding-top:20px;
+}
+.icons{
+	position:absolute;
+	text-align: center;
+	left:50%;
+	margin-top: 10%;
+	margin-left:-150px;
+}
+.button{
+	display: inline-block;
+	transition: all $transitionTime ease;
+}
+.button:hover{
+	transform: translate(0px,-20px);
+}
+.button:hover .topic{
+	opacity: 1;
+}
+.button:active .icon{
+	transform: scale(1.2,0.8);
+}
+.topic{
+	color:$cinnabarRed;
+	font-family: $headerFont;
+	opacity: 0;
+	transition: all $transitionTime ease;
+}
+.icon{
+	display: block;
+	padding-bottom: 10px;
+	margin:0 20px;
+	width: 100%;
+	max-height: 50px;
+	max-width: 50px;
+	transition: all $transitionTime ease;
+	-webkit-filter: drop-shadow(5px 5px 5px #BBBBBB);
+	filter: drop-shadow(5px 5px 5px #BBBBBB); 
+}
+.aboutPage{
+	
+}
+
+/***********************/
+/*CSS for Home Page    */
+/***********************/
+.homeCoverImg{
+	width:100%;
+	animation: homeAni 3s;
+}
+.intro{
+	display: block;
+	margin:auto;
+	text-align: center;
+	color:$prussianBlue;
+	/*position needs to be relative so that we can apply animation*/
+	position: relative;
+}
+.intro.caption{
+	margin-top: 20px;
+	margin-bottom: 50px;
+	font-family: $textFont;
+	opacity: 1;
+	animation: caption 0.5s 1s ease-in;
+	font-size: 2em;
+}
+.intro.myname{
+	font-family: $textFont;
+	animation: myname 0.5s 1s ease-in;
+	font-size: 2em;
+}
+.name{
+	padding: 10px 0 20px 0;
+	display: block;
+	text-align: center;
+	margin:auto;
+	color:$prussianBlue;
+	font-family: $headerFont;
+	font-size: 5em;
+	text-shadow: 5px 5px 10px #CCCCCC;
+	letter-spacing: .1em;
+}
+.homePage{
+	padding-top: 5%;
+}
+@for $i from 1 through 9 {
+	.char#{$i}{
+		animation: nameAni+$i 4s; 
+		animation-delay: (1+$i/10)+s;
+		animation-fill-mode: forwards;
+		visibility: hidden;
+	}
+}
+@mixin keyframes ($name){
+	@keyframes #{$name} {
+		@content;
+	}
+}
+@for $i from 1 through 9 {
+	$percent : $i*10+10;
+	$percentOpa : $i+10;
+	@include keyframes(nameAni#{$i}) {
+		0% {
+			opacity: 0;
+			visibility: hidden;
+		}
+		#{$percentOpa}% {
+			opacity: 1;
+		}
+	  	#{$percent}% {
+	  		opacity: 1;
+	  		visibility: visible;
+	  	}
+	  	100% {
+	  		opacity: 1;
+	  		visibility: visible;
+	  	}
+	}
+}
+@include keyframes(caption){
+	0%{
+		opacity: 0;
+		left:0px;
+		top:30px;
+	}
+	100%{
+		top:0px;
+	}
+}
+@include keyframes(myname){
+	0%{
+		opacity: 0;
+		left:0px;
+		top:-30px;
+	}
+	100%{
+		opacity: 1;
+		top:0px;
+	}
+}
+@include keyframes(homeAni){
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@include keyframes(captionOpa){
+	0%{
+		opacity: 1;
+	}
+	30%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	70%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+/***********************/
+/*CSS for Navgation Bar*/
+/***********************/
+.navContainer {
+	background-image: url("/images/swirl_pattern.png");
+	background-repeat: repeat;
+	height:115px;
+	margin:0px;
+	padding:0px;
+	box-shadow: 0px 10px 30px #DDDDDD;
+}
+.navBar {
+	padding:10px 0;
+	margin:auto;
+	max-width:1000px;
+}
+/*Yanjia Li logo*/
+.logo {
+	height:115px;
+	left:50%;
+	position: absolute;
+	margin:0 0 0 -150px;
+}
+.logoImg {
+	display: block;
+	width: 300px;
+	height:115px;
+	transition: all $transitionTime ease;
+	background-image: url("/images/yanjia_logo.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.logoImg:hover {
+	background-image: url("/images/home_logo.png");
+}
+.logoImg:active {
+	opacity:0.5;
+}
+/*Icons in navigation bar*/
+.navImg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:45px;
+	height:45px;
+	fill: none;
+	stroke: $midnightExpress;
+	transition: all $transitionTime ease;
+}
+.navImg.skills {
+	fill: $midnightExpress;
+	stroke: $midnightExpress;
+	transition: all $transitionTime ease;
+}
+.navText {
+	font-family: $headerFont;
+	color: $midnightExpress;
+	transition: all $transitionTime ease;
+}
+/*Navigation bar list*/
+.navUl {
+	display: inline-block;
+	list-style: none;
+	width:50%;
+	padding:0px;
+	margin:0px;
+}
+.navUl.left{
+	float:left;
+}
+.navUl.right{
+	float:right;
+}
+.navLi {
+	margin-top:20px;
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	transition: opacity $transitionTime ease;
+} 
+.navLi.left{
+	float:left;
+	margin-left:2%;
+}
+.navLi.right{
+	float:right;
+	margin-right:2%;
+}
+.navLi:hover .navImg{
+	stroke: $cinnabarRed;
+	transform: translate(0px,-10px);
+}
+.navLi:hover .navText{
+	color: $cinnabarRed;
+}
+.navLi:hover .navImg.skills{
+	stroke: $cinnabarRed;
+	fill: $cinnabarRed;
+}
+.navLi:active {
+	opacity:0.5;
+}
+.navLi:active .navImg{
+	transform: translate(0px,2px);
+}

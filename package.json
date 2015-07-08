@@ -1,0 +1,37 @@
+{
+  "name": "liyanjia",
+  "version": "0.0.0",
+  "description": "Yanjia's Portfolio",
+  "private": true,
+  "scripts": {
+    "watch": "watchify app.js -o public/js/bundle.js -v",
+    "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
+    "build": "npm run browserify ",
+    "start": "node server.js"
+  },
+  "author": "Yanjia Li",
+  "dependencies": {
+    "better-console": "^0.2.4",
+    "body-parser": "~1.12.4",
+    "cookie-parser": "~1.3.5",
+    "express": "~4.12.4",
+    "express-handlebars": "^2.0.1",
+    "jade": "~1.9.2",
+    "mongoose": "^4.0.6",
+    "morgan": "~1.5.3",
+    "node-jsx": "^0.13.3",
+    "serve-favicon": "~2.2.1"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.4",
+    "nodemon": "^1.3.7",
+    "reactify": "^1.1.1",
+    "uglify-js": "^2.4.23",
+    "watchify": "^3.2.2"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
+}

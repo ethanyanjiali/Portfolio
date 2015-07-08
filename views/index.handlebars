@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yanjia Li</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/jquery.lettering-0.6.1.min.js"></script>
+  </head>
+  <body>
+<!--   I have to put this side bar out side main div because of a hopeless bug that "fixed position breaks after its parent transform" in Chrome-->
+  <div class="verticalIcons2" id="verticalIconsProj">
+    <div class="verticalButton">
+      <a href="#systems"><img class="verticalIcon sysIcon" src="/images/systems.png"></img></a>
+    </div>
+    <div class="verticalButton">
+      <a href="#game"><img class="verticalIcon gameIcon" src="/images/game.png"></img></a>
+    </div>
+    <div class="verticalButton">
+      <a href="#web"><img class="verticalIcon webIcon" src="/images/web.png"></img></a>
+    </div>
+    <div class="verticalButton">
+      <a href="#data"><img class="verticalIcon dataIcon" src="/images/data.png"></img></a>
+    </div>
+  </div>
+  <div class="verticalIcons1" id="verticalIconsAbout">
+    <div class="verticalButton">
+      <a href="#education"><img class="verticalIcon eduIcon" src="/images/eduIcon.png"></img></a>
+    </div>
+    <div class="verticalButton">
+      <a href="#work"><img class="verticalIcon workIcon" src="/images/workIcon.png"></img></a>
+    </div>
+    <div class="verticalButton">
+      <a href="#site"><img class="verticalIcon siteIcon" src="/images/siteIcon.png"></img></a>
+    </div>
+  </div>
+  <!-- Above is sidebar -->
+  <div id="main">
+    {{> navbar }}
+    <div style="margin:0;padding:0;">
+      <div class="loaderContainer" id="loader">
+        <div class="loader">
+          <img class="loaderImg" src="images/loader2.gif"/>
+          <h2 style="color:#004563;">Loading</h2>
+        </div>
+      </div>
+  	 <div class="contentContainer" id="content">
+  	 </div>
+     {{> footer }}
+    </div>
+  </div>
+  <div id="contact">
+
+  </div>
+
+  <div id="mail">
+    <div class="mailContent">
+      <div class="portrait">
+        <img class="portraitImg" src="images/selfie.jpg"/>
+        <div class="contactIcons">
+          <a href="mailto:yl2493@cornell.edu" target="_blank"><img class="contactIcon" src="images/gmail.png"/></a>
+          <a href="https://github.com/liyanjia92" target="_blank"><img class="contactIcon" src="images/github2.png"/></a>
+        </div>
+        <div class="contactIcons">
+          <a href="https://www.facebook.com/profile.php?id=1785615501" target="_blank"><img class="contactIcon" src="images/facebook.png"/></a>
+          <a href="https://www.linkedin.com/in/yanjiali" target="_blank"><img class="contactIcon" src="images/linkedin.png"/></a>
+        </div>
+      </div>
+      <div class="contactText">
+        <h2 class="msg1">
+          I'm currently looking for a full-time software development position in US. If you feel like I'm the man for your job, let's get down to business!
+        </h2>
+        <p class="msg2">
+          Whether you would like to offer me a job, know more about my works and skills, ask me about this site or just say hello then I would love to hear from you.
+        </p>
+      </div> 
+    </div>
+    <img src="/images/close.png" class="contactClose" id="close"/>
+  </div>
+	<script>
+    var data = {};
+		$(document).ready(function(){
+			$("#content").load("{{redirect}}",data);
+		})
+
+	</script>
+  <script src="/javascripts/main.js"></script>
+  </body>
+</html>

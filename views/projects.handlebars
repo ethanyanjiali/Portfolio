@@ -1,0 +1,256 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=1865730916986298";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="projectsPage">
+	<div class="cover">
+		<span class="title">PROJECTS.</span>
+		<div class="projectsIcons" id="icons">
+			<div class="button">
+				<a href="#systems"><img class="icon sysIcon" src="/images/systems.png"></img></a>
+				<span class="topic eduTopic">Systems</span>
+			</div>
+			<div class="button">
+				<a href="#game"><img class="icon gameIcon" src="/images/game.png"></img></a>
+				<span class="topic eduTopic">Games</span>
+			</div>
+			<div class="button">
+				<a href="#web"><img class="icon webIcon" src="/images/web.png"></img></a>
+				<span class="topic workTopic">Web &amp; Apps</span>
+			</div>
+			<div class="button">
+				<a href="#data"><img class="icon dataIcon" src="/images/data.png"></img></a>
+				<span class="topic siteTopic">Data</span>
+			</div>
+		</div>
+		<img class="coverImg" src="/images/newyork.png"></img>
+	</div>
+	<div class="aboutContent">
+		<div id="systems">
+			<div class="projSection">
+				<h2>Systems</h2>
+				<div class="projTop"><img class="projIcon" src="images/generalProject.png"><h3 class="projTitle">Distributed Fault-tolerant Session Management System</h3></div>
+				<div class="projImg left">
+					<img src="images/distributed1.jpg" style="width:100%"></src>
+				</div>
+				<div class="projContent right">
+					<h2>Techniques</h2>
+					<p>Java / Distributed System / AWS Beanstalk</p>
+					<h2>Contributors</h2>
+					<p>Yanjia Li, Xi He, Long Ma</p>
+					<h2>Description</h2>
+					<p>
+						This 1-resilient system manage session by serveral distributed servers. This 1-resilient feature makes our session management system able to keep working while one of server in the pair is We designed session state in-memory database and cookie. Also, We imlemented the RPC Routines between machines through UDP for Gossip protocol. Through gossip protocol, it can exchange views between servers and bootstrap new machine from one centralized view in SimpleDB.
+					</p>
+				</div>
+			</div>
+			<div class="projSection">
+				<div class="projTop"><img class="projIcon" src="images/generalProject.png"><h3 class="projTitle">Multithreading Mail Server with File System</h3></br></div>
+				<div class="projImg right">
+					<img src="images/filesystem.png" style="width:100%"></src>
+				</div>
+				<div class="projContent left">
+					<h2>Techniques</h2>
+					<p>Python / UFS / Operating System</p>
+					<h2>Contributors</h2>
+					<p>Yanjia Li</p>
+					<h2>Description</h2>
+					<p>
+						It is a synchronized multithreading mail server using SMTP protocol and a file system with Unix File System structure. I Implemented a threading pool to process multiple clients' requests in the same time. semaphore and conditional variables are used to to ensure synchronized communication between server and more than 32 clients. The entire state machine observes SMTP protocol and return corresponding code for different request. The Unix File system here uses inodes and descriptors to manage files. The system keeps stable under more than 1k queries/min. 
+					</p>
+					<a href="https://github.com/liyanjia92/CS4410" target="_blank"><img class="githubLink" src="images/github1.png"/></a>
+				</div>
+			</div>
+			<div class="projSection">
+				<div class="projTop"><img class="projIcon" src="images/generalProject.png"><h3 class="projTitle">Freescale Smart Car</h3></br></div>
+				<div class="projImg left">
+					<div class="fb-video fb_iframe_widget fb_iframe_widget_fluid_desktop" data-href="https://www.facebook.com/1785615501/videos/vb.1785615501/10203225975288612/?type=2&amp;theater&amp;notif_t=video_processed" data-width="500" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1865730916986298&amp;container_width=359&amp;href=https%3A%2F%2Fwww.facebook.com%2F1785615501%2Fvideos%2Fvb.1785615501%2F10203225975288612%2F%3Ftype%3D2%26theater%26notif_t%3Dvideo_processed&amp;locale=en_US&amp;sdk=joey&amp;width=500"><span style="vertical-align: bottom; width: 500px; height: 202px;"><iframe name="f394bf6b84" width="500px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:video Facebook Social Plugin" src="http://www.facebook.com/v2.3/plugins/video.php?app_id=1865730916986298&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FxRlIuTsSMoE.js%3Fversion%3D41%23cb%3Df83de56f4%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A3000%252Ff28a8e8424%26relation%3Dparent.parent&amp;container_width=359&amp;href=https%3A%2F%2Fwww.facebook.com%2F1785615501%2Fvideos%2Fvb.1785615501%2F10203225975288612%2F%3Ftype%3D2%26theater%26notif_t%3Dvideo_processed&amp;locale=en_US&amp;sdk=joey&amp;width=500" style="border: none; visibility: visible; width: 500px; height: 202px;" class=""></iframe></span></div>
+				</div>
+				<div class="projContent right">
+					<h2>Techniques</h2>
+					<p>C / Freescale S12X / PID Control / Computer Vision</p>
+					<h2>Contributors</h2>
+					<p>Yanjia Li, Zhou Shu, Yechen Gu</p>
+					<h2>Description</h2>
+					<p>
+						The freescale smart car can track the road by camera and drive automatically. We used binaryzation to process road information and adjust vehicle direction by PID control algorithm. Besides, we added differential control to have more steering capability. We also add an ultrasound sensor to detect barriers. This smart car can drive at the speed of 2.8 meters per second without going off track. All of mechanism assembly and circuits design are finished by ourselves. It won the third prize of Freescale Intelligent Car Racing (Chongqing University Division).
+					</p>
+				</div>
+			</div>
+			<div class="projSection">
+				<div class="projTop"><img class="projIcon" src="images/generalProject.png"><h3 class="projTitle">Infrared Communication Device</h3></br></div>
+				<div class="projImg right">
+					<img src="images/infrared1.png" style="width:100%"></src>
+				</div>
+				<div class="projContent left">
+					<h2>Techniques</h2>
+					<p>C / ST STM32 / Anolog Circuits </p>
+					<h2>Contributors</h2>
+					<p>Yanjia Li, Li Zhang, Qing Luo</p>
+					<h2>Description</h2>
+					<p>
+						The infrared communication device is based on a STM32 micro-controller. It can transimit temperature(digital) and voice(analog) signal in the same time. Generally, it is amplitude modulation on infrared transceiver tube and transistor 9013. In addition, it was embedded with small signal amplifier to ensure the recogition of weak signal. This device mainly includes infrared transmission and receiving module, retransmission circuit, temperature sensing module, displaying circuit and so on. It won the First Prize in National Undergraduate Electronic Design Contest(Chongqing Division).
+					</p>
+				</div>
+			</div>
+			<div class="divider">
+			</div>
+		</div>
+		<div id="game">
+			<div class="projSection">
+				<h2>Games</h2>
+				<div class="projTop"><img class="projIcon" src="images/apollo.png"><h3 class="projTitle">Project Apollo</h3></br></div>
+				<div class="projImg left">
+					<div class="fb-video fb_iframe_widget fb_iframe_widget_fluid_desktop" data-href="https://www.facebook.com/video.php?v=908169165906164" data-width="500" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1865730916986298&amp;container_width=359&amp;href=https%3A%2F%2Fwww.facebook.com%2Fvideo.php%3Fv%3D908169165906164&amp;locale=en_US&amp;sdk=joey&amp;width=500"><span style="vertical-align: bottom; width: 500px; height: 202px;"><iframe name="f1b8cf81ac" width="500px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:video Facebook Social Plugin" src="http://www.facebook.com/v2.3/plugins/video.php?app_id=1865730916986298&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FxRlIuTsSMoE.js%3Fversion%3D41%23cb%3Df3661c193%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A3000%252Ff28b4f8158%26relation%3Dparent.parent&amp;container_width=359&amp;href=https%3A%2F%2Fwww.facebook.com%2Fvideo.php%3Fv%3D908169165906164&amp;locale=en_US&amp;sdk=joey&amp;width=500" style="border: none; visibility: visible; width: 500px; height: 202px;" class=""></iframe></span></div>
+				</div>
+				<div class="projContent right">
+					<h2>Techniques</h2>
+					<p>C++ / Cocos-2dx / Javascript</p>
+					<h2>Contributors</h2>
+					<p>Yanjia Li, Will Chan</p>
+					<h2>Description</h2>
+					<p>
+						We're the team Salty Enchilada from Cornell Advanced Game Design. Apollo explores the unique physics of light and optics, challenging you to find neat ways of solving a series of 30 mind-bending puzzles. In this project, I used Cocos2d-x and C++ to model the physical light interaction for the game. Besides, I also made a level editor using Javascript without any library.
+					</p>
+					<a href="https://itunes.apple.com/us/app/project-apollo/id990405377?l=zh&amp;ls=1&amp;mt=8" target="_blank"><img class="appstore" src="images/appstore.png"></img></a>
+				</div>
+
+			</div>
+			<div class="projSection">
+				<div class="projTop"><img class="projIcon" src="images/generalProject.png"><h3 class="projTitle">Unbeatable AI Tetris</h3></br></div>
+				<div class="projImg right">
+					<img src="images/tetris1.png" style="width:100%"></src>
+				</div>
+				<div class="projContent left">
+					<h2>Techniques</h2>
+					<p>HTML5 / Javascript / Aritificial Intelligence</p>
+					<h2>Contributors</h2>
+					<p>Yanjia Li, Xi He</p>
+					<h2>Description</h2>
+					<p>
+						It is an artificial intelligence agent for Tetris game, which can clear more than 40k lines and compete with best human player. We created a greedy algorithm with 6 heuristics. Optimized by Particle Swarm algorithm from data of 3k times gameplay. There're several modes for choosing to add more fun to this game. In arcade mode, each line you cleared will push more pressure to your opponent.
+					</p>
+					<a href="https://github.com/liyanjia92/TetrisAI" target="_blank"><img class="githubLink" src="images/github1.png"/></a>
+				</div>
+			</div>
+			<div class="divider">
+			</div>
+		</div>
+		<div id="web">
+			<div class="projSection">
+				<h2>Web &amp; Apps</h2>
+				<div class="projTop"><img class="projIcon" src="images/trevi.png"><h3 class="projTitle">Trevi</h3></br></div>
+				<div class="projImg left">
+					<img src="images/trevi1.png" style="width:100%"></src>
+				</div>
+				<div class="projContent right">
+					<h2>Techniques</h2>
+					<p>Java / Android / Node.js / MongoDB</p>
+					<h2>Contributors</h2>
+					<p>Yanjia Li, Zelin Zeng, Muyun Chen, Pablo Ochoa, Rushi Shah</p>
+					<h2>Description</h2>
+					<p>
+						It is an location based service for people to make wishes and set a bounty for their own wish. Anyone nearby can view those public wishes and request to realize it. Its prototype comes from 2015 Amazon Global Intern Hackathon and finished in one day. It has complete logic for people to make a new wish, request to take a wish, confrim a request, submit result and confirm result. It also sorts and filter wishes based on geo-location. In the future, I'm going to add live chat feature and transaction system to this app. The iOS version will also be released soon. 
+					</p>
+					<a href="http://www.amazon.com/fairydream-Trevi/dp/B010ITXDM4/ref=sr_1_1?s=mobile-apps&amp;ie=UTF8&amp;qid=1436207966&amp;sr=1-1&amp;keywords=trevi" target="_blank"><img class="appstore" src="images/amazon-appstore.png"></img></a>
+				</div>
+			</div>
+			<div class="projSection">
+				<div class="projTop"><img class="projIcon" src="images/generalProject.png"><h3 class="projTitle">Savorlink</h3></br></div>
+				<div class="projImg right">
+					<img src="images/savorlink1.png" style="width:100%"></src>
+				</div>
+				<div class="projContent left">
+					<h2>Techniques</h2>
+					<p>Node.js / MongoDB / Semantic-UI / Javascript</p>
+					<h2>Contributors</h2>
+					<p>Yanjia Li, Benran Fan, Long Ma, Yaxian Xie</p>
+					<h2>Description</h2>
+					<p>
+						It is an AirBnb-like website for food sharing. We hope that people can share their homecooking to their friends or even strangers in their own dinning room through our website. As a self-initiated project and a real business, I lead and participate into every aspect of its development, including requirement definition, product design, team managment, market research, front-end, back-end, deployment and financing. We used socket.io to build the same live conversation feature as Airbnb does. We also built a review and rating system with multiple authentication to improve our customers' experience. We referred to Airbnb for our UI design. With Semantic-UI, our website is also fully reponsive and mobile friendly. 
+					</p>
+				</div>
+			</div>
+			<div class="projSection">
+				<div class="projTop"><img class="projIcon" src="images/generalProject.png"><h3 class="projTitle">Media Enabled Research Interface and Database</h3></br></div>
+				<div class="projImg left">
+					<img src="images/merid1.png" style="width:100%"></src>
+				</div>
+				<div class="projContent right">
+					<h2>Techniques</h2>
+					<p>Node.js / MongoDB / Bootstrap / Javascript</p>
+					<h2>Contributors</h2>
+					<p>Yanjia Li, Benran Fan, Long Ma, Renhua Wang, Celine Brass, Ethan Rubinson, Youenn Paris, Michael Dougherty</p>
+					<h2>Description</h2>
+					<p>
+						It is video service website for researchers to make video-related surveys. On this website, researcher can upload new videos to cloud and set up a new survey based on this video. Participants finish this survey by making some comments under the video. This is a huge project with lots of developers. I'm respnsible for the live comments and video viewing page. I also built the UI for the page by Jade template and Bootstrap framework together.
+					</p>
+				</div>
+			</div>
+			<div class="divider">
+			</div>
+		</div>
+		<div id="data">
+			<div class="projSection">
+				<h2>Data</h2>
+				<div class="projTop"><img class="projIcon" src="images/generalProject.png"><h3 class="projTitle">Distributed Data Analysis Applications</h3></br></div>
+				<div class="projImg right">
+					<img src="images/hadoop1.png" style="width:100%"></src>
+				</div>
+				<div class="projContent left">
+					<h2>Techniques</h2>
+					<p>Hadoop / MapReduce / Machine Learning / Java</p>
+					<h2>Contributors</h2>
+					<p>Yanjia Li, Long Ma, Xi He</p>
+					<h2>Description</h2>
+					<p>
+						This project is consist of two parts. The first part is a fast convergence page rank computing application. It will load bulk URL information and computes page rank for each URL in several iterations. It also uses block computation technique to reduce convergence time. The second one is a dataset clustering application based on K-Means algorithm. Two applications processed more than 800,000 lines of data, which is 300MB, with MapReduce. In the end, we also deployed the system on Amazon’s EMR.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var sidebarIsVisible = false;
+	var sidebarAtBottom = false;
+	function shouldIconsMoveToSide(){
+		var iconsTop = $("#icons").offset().top;
+		var iconsHeight = $("#icons").height();
+		var windowTop = $(window).scrollTop();
+		return (iconsTop+iconsHeight < windowTop);
+	}
+	// Logic used to controll the sidebar
+	$(window).scroll(function(){
+		var sideBot = $('#verticalIconsProj').offset().top + $('#verticalIconsProj').outerHeight(true);
+		var docHeight = $(document).height();
+		console.log(sideBot);
+		console.log(docHeight);
+		if(!sidebarAtBottom && sideBot>(docHeight - 50)){
+			$("#verticalIconsProj").css("visibility","hidden").animate({opacity:0},500);
+			sidebarAtBottom = true;
+		} else if (sidebarAtBottom && sideBot<(docHeight - 100)){
+			$("#verticalIconsProj").css("visibility","visible").animate({opacity:1},500);
+			sidebarAtBottom = false;
+		}
+		if(shouldIconsMoveToSide() && !sidebarIsVisible){
+			sidebarIsVisible = true;
+			$("#icons").animate({opacity:0},1, function(){
+				$("#verticalIconsProj").css("visibility","visible").animate({opacity:1,left: "+=2%"},500);
+			});
+		} else if (!shouldIconsMoveToSide() && sidebarIsVisible){
+			sidebarIsVisible = false;
+			$("#verticalIconsProj").css("visibility","hidden").animate({opacity:0,left: "-=2%"},500, function(){
+				$("#icons").animate({opacity:1},500);
+			});
+		}
+	})
+	$('a[href*=#]').on('click', function(event){     
+	    event.preventDefault();
+	    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+	});
+</script>

@@ -1,0 +1,139 @@
+<div class="aboutPage">
+	<div class="cover">
+		<span class="title">ABOUT.</span>
+		<div class="icons" id="icons">
+			<div class="button">
+				<a href="#education"><img class="icon eduIcon" src="/images/eduIcon.png"></img></a>
+				<span class="topic eduTopic">Education</span>
+			</div>
+			<div class="button">
+				<a href="#work"><img class="icon workIcon" src="/images/workIcon.png"></img></a>
+				<span class="topic workTopic">Work</span>
+			</div>
+			<div class="button">
+				<a href="#site"><img class="icon siteIcon" src="/images/siteIcon.png"></img></a>
+				<span class="topic siteTopic">Site</span>
+			</div>
+		</div>
+		<img class="coverImg" style="margin-top:15px" src="/images/chicago.png"></img>
+	</div>
+	<div class="aboutContent">
+		<div class="aboutEdu" id="education">
+			<div class="aboutSection">
+				<h2>Education</h2>
+				<img class="cornellImg" src="/images/cornell.png"></img>
+				<div class="aboutText">
+					<h2 class="schoolName">Cornell University</h2><span class="location">Ithaca, NY</span><span class="duration">2014 - 2015</span>
+					<p>
+						Major: Information Science<br>
+						Courses: Artificial Intelligence / Operating System / Machine Learning / Database System / Large-scale Information System
+					</p>
+					<p>
+						While I'm pursuing the master degree, I took a lot of data-oriented and system courses to enrich my programming experiences. Here in Cornell, I got abilities of building intelligence system independently and anylyzing data by proper algorithm.
+					</p>
+				</div>
+			</div>
+			<div class="aboutSection" class="schoolName">
+				<img class="cquImg" src="/images/cqu.png"></img>
+				<div class="aboutText">
+					<h2 class="schoolName">Chongqing University</h2><span class="location">Chongqing, China</span><span class="duration">2010 - 2014</span>
+					<p>
+						Major: Communication Engineering<br>
+						Courses: Computer Network / Embedded System / Circuits / Digital Signal Processing / Stochastic Process<br>
+						Awards: First Prize in National Undergraduate Electronic Design Contest (Chongqing Division)
+					</p>
+					<p>
+						I enjoys my undergrad year much. Chongqing is a city filled with passion and joy. And Chongqing University gave me the foundation as an engineer. I got plenty of experiences about embedded system through several competitions. Prof. Yueping Cai instructed me on the research of software defined network.
+					</p>
+				</div>
+			</div>
+			<div class="divider">
+			</div>
+		</div>
+		<div class="aboutWork" id="work">
+			<div class="aboutSection">
+				<h2>Work Experiences</h2>
+				<img class="amazonImg" src="/images/amazon.png"></img>
+				<div class="aboutText">
+					<h2 class="schoolName">Amazon.com</h2><span class="location">Seattle, WA</span><span class="duration">May 2015 - Aug 2015</span>
+					<p>
+						Team: Fulfillment by Amazon<br>
+						Position: Software Development Engineer Intern
+					</p>
+					<p>
+						During my intern in Amazon, I was responisble for rebuilding the entire LTL shipment system. LTL shipment is used by Amazon to deliver products from sellers to fulfillment centers with trucks. This system manages estimation, confirmation and cancellation of all these types of carrier shipment. While making this new system, I used brand new carrier APIs and new structure based on AWS to improve the scalabiltity and performace.
+					</p>
+				</div>
+			</div>
+			<div class="aboutSection">
+				<img class="cornellImg" src="/images/cornell.png"></img>
+				<div class="aboutText">
+					<h2 class="schoolName">Cornell Univeristy ILR School</h2><span class="location">Ithaca, NY</span><span class="duration">Oct 2014 - May 2015</span>
+					<p>
+						Institute: Employment and Disablity Institute<br>
+						Position: Student Web Developer
+					</p>
+					<p>
+						While I'm studying in Cornell University, I took this on campus job to gain more real-world experience of web development. I developed the web toolkits for managerial use. Implemented both front-end and backend of the website. Besides, I also implemented the questionnaire present function for a self-assessment website.
+					</p>
+				</div>
+			</div>
+			<div class="divider">
+			</div>
+		</div>
+		<div class="aboutSite" id="site">
+			<div class="aboutSection">
+				<h2>About this site</h2>
+				<img class="yanjiaImg" src="/images/yanjia_logo.png"></img>
+				<div class="aboutText">
+					<h2 class="schoolName">Yanjia's Portfolio</h2><span class="location">Seattle, WA</span><span class="duration">created on July 2015</span>
+					<p>
+						This site has been hand-crafted from the ground up in my bedroom in Seattle. I drawed, designed and developed everything in my site. This site achieves responsive design without any framework. 
+					</p>
+					<p>
+						Thanks to <a href="https://jquery.com/" target="_blank">jQuery</a>, <a href="http://letteringjs.com/" target="_blank">lettering.js</a>, <a href="http://sass-lang.com/" target="_blank">SASS</a> and <a href="http://d3js.org/" target="_blank">D3.js</a>, you saved me much of time. Icons and images were created by Adobe Illustraor and Photoshop. Animation was coded by CSS3 and JS together. This site also has a Node.js + MongoDB server, hosted in AWS. And again I'm using my favorite framework Express. Most of debug work was finished on Google Chrome. None of this site would have been possible without these great softwares.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var sidebarIsVisible = false;
+	var sidebarAtBottom = false;
+	function shouldIconsMoveToSide(){
+		var iconsTop = $("#icons").offset().top;
+		var iconsHeight = $("#icons").height();
+		var windowTop = $(window).scrollTop();
+		return (iconsTop+iconsHeight < windowTop);
+	}
+	// Logic used to controll the sidebar
+	$(window).scroll(function(){
+		var sideBot = $('#verticalIconsAbout').offset().top + $('#verticalIconsAbout').outerHeight(true);
+		var docHeight = $(document).height();
+		console.log(sideBot);
+		console.log(docHeight);
+		if(!sidebarAtBottom && sideBot>(docHeight - 50)){
+			$("#verticalIconsAbout").css("visibility","hidden").animate({opacity:0},500);
+			sidebarAtBottom = true;
+		} else if (sidebarAtBottom && sideBot<(docHeight - 100)){
+			$("#verticalIconsAbout").css("visibility","visible").animate({opacity:1},500);
+			sidebarAtBottom = false;
+		}
+		if(shouldIconsMoveToSide() && !sidebarIsVisible){
+			sidebarIsVisible = true;
+			$("#icons").animate({opacity:0},1, function(){
+				$("#verticalIconsAbout").css("visibility","visible").animate({opacity:1,left: "+=2%"},500);
+			});
+		} else if (!shouldIconsMoveToSide() && sidebarIsVisible){
+			sidebarIsVisible = false;
+			$("#verticalIconsAbout").css("visibility","hidden").animate({opacity:0,left: "-=2%"},500, function(){
+				$("#icons").animate({opacity:1},500);
+			});
+		}
+	})
+	$('a[href*=#]').on('click', function(event){     
+	    event.preventDefault();
+	    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+	});
+</script>
