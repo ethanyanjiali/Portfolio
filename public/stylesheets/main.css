@@ -277,6 +277,7 @@ p {
     float: none !important; }
 
   .verticalButton:hover {
+    -webkit-transform: translate(0px, -10px) !important;
     transform: translate(0px, -10px) !important; }
 
   .verticalButton {
@@ -566,6 +567,7 @@ p {
   transition: all 0.1s ease-out; }
 
 .contactClose:active {
+  -webkit-transform: scale(0.9, 0.9);
   transform: scale(0.9, 0.9); }
 
 .contactText {
@@ -714,11 +716,13 @@ p {
   filter: drop-shadow(5px 5px 5px #BBBBBB); }
 
 .viewSkills:hover {
+  -webkit-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
   -webkit-filter: drop-shadow(1px 1px 5px #BBBBBB);
   filter: drop-shadow(1px 1px 5px #BBBBBB); }
 
 .viewSkills:active {
+  -webkit-transform: scale(1, 1);
   transform: scale(1, 1); }
 
 /***********************/
@@ -744,9 +748,11 @@ p {
   margin-bottom: 40px; }
 
 .verticalButton:hover {
+  -webkit-transform: translate(10px, 0px);
   transform: translate(10px, 0px); }
 
 .verticalButton:active .verticalIcon {
+  -webkit-transform: scale(1.2, 0.8);
   transform: scale(1.2, 0.8); }
 
 .amazonImg {
@@ -807,12 +813,14 @@ p {
   transition: all 0.25s ease; }
 
 .button:hover {
+  -webkit-transform: translate(0px, -20px);
   transform: translate(0px, -20px); }
 
 .button:hover .topic {
   opacity: 1; }
 
 .button:active .icon {
+  -webkit-transform: scale(1.2, 0.8);
   transform: scale(1.2, 0.8); }
 
 .topic {
@@ -976,7 +984,31 @@ p {
   100% {
     opacity: 1;
     visibility: visible; } }
+@-webkit-keyframes nameAni1 {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  11% {
+    opacity: 1; }
+  20% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
 @keyframes nameAni2 {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  12% {
+    opacity: 1; }
+  30% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+@-webkit-keyframes nameAni2 {
   0% {
     opacity: 0;
     visibility: hidden; }
@@ -1000,7 +1032,31 @@ p {
   100% {
     opacity: 1;
     visibility: visible; } }
+@-webkit-keyframes nameAni3 {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  13% {
+    opacity: 1; }
+  40% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
 @keyframes nameAni4 {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  14% {
+    opacity: 1; }
+  50% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+@-webkit-keyframes nameAni4 {
   0% {
     opacity: 0;
     visibility: hidden; }
@@ -1024,7 +1080,31 @@ p {
   100% {
     opacity: 1;
     visibility: visible; } }
+@-webkit-keyframes nameAni5 {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  15% {
+    opacity: 1; }
+  60% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
 @keyframes nameAni6 {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  16% {
+    opacity: 1; }
+  70% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+@-webkit-keyframes nameAni6 {
   0% {
     opacity: 0;
     visibility: hidden; }
@@ -1048,7 +1128,31 @@ p {
   100% {
     opacity: 1;
     visibility: visible; } }
+@-webkit-keyframes nameAni7 {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  17% {
+    opacity: 1; }
+  80% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
 @keyframes nameAni8 {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  18% {
+    opacity: 1; }
+  90% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+@-webkit-keyframes nameAni8 {
   0% {
     opacity: 0;
     visibility: hidden; }
@@ -1072,7 +1176,26 @@ p {
   100% {
     opacity: 1;
     visibility: visible; } }
+@-webkit-keyframes nameAni9 {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  19% {
+    opacity: 1; }
+  100% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
 @keyframes caption {
+  0% {
+    opacity: 0;
+    left: 0px;
+    top: 30px; }
+  100% {
+    top: 0px; } }
+@-webkit-keyframes caption {
   0% {
     opacity: 0;
     left: 0px;
@@ -1087,12 +1210,36 @@ p {
   100% {
     opacity: 1;
     top: 0px; } }
+@-webkit-keyframes myname {
+  0% {
+    opacity: 0;
+    left: 0px;
+    top: -30px; }
+  100% {
+    opacity: 1;
+    top: 0px; } }
 @keyframes homeAni {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+@-webkit-keyframes homeAni {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 @keyframes captionOpa {
+  0% {
+    opacity: 1; }
+  30% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  70% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes captionOpa {
   0% {
     opacity: 1; }
   30% {
@@ -1193,6 +1340,7 @@ p {
 
 .navLi:hover .navImg {
   stroke: #EB3A25;
+  -webkit-transform: translate(0px, -10px);
   transform: translate(0px, -10px); }
 
 .navLi:hover .navText {
@@ -1206,6 +1354,7 @@ p {
   opacity: 0.5; }
 
 .navLi:active .navImg {
+  -webkit-transform: translate(0px, 2px);
   transform: translate(0px, 2px); }
 
 .smalllogo {
