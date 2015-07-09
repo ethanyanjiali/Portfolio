@@ -314,6 +314,7 @@ p {
 		float:none !important;
 	}
 	.verticalButton:hover{
+		-webkit-transform: translate(0px,-10px) !important;
 		transform: translate(0px,-10px) !important;
 	}
 	.verticalButton {
@@ -601,6 +602,7 @@ p {
 	transition: all 0.1s ease-out;
 }
 .contactClose:active{
+	-webkit-transform:scale(0.9,0.9);
 	transform:scale(0.9,0.9);
 }
 .contactText{
@@ -751,11 +753,13 @@ p {
 	filter: drop-shadow(5px 5px 5px #BBBBBB); 
 }
 .viewSkills:hover{
+	-webkit-transform: scale(1.1,1.1);
 	transform: scale(1.1,1.1);
 	-webkit-filter: drop-shadow(1px 1px 5px #BBBBBB);
 	filter: drop-shadow(1px 1px 5px #BBBBBB); 
 }
 .viewSkills:active{
+	-webkit-transform: scale(1,1);
 	transform: scale(1,1);
 }
 /***********************/
@@ -781,9 +785,11 @@ p {
 	margin-bottom: 40px;
 }
 .verticalButton:hover{
+	-webkit-transform: translate(10px,0px);
 	transform: translate(10px,0px);
 }
 .verticalButton:active .verticalIcon{
+	-webkit-transform: scale(1.2,0.8);
 	transform: scale(1.2,0.8);
 }
 .amazonImg{
@@ -845,12 +851,14 @@ p {
 	transition: all $transitionTime ease;
 }
 .button:hover{
+	-webkit-transform: translate(0px,-20px);
 	transform: translate(0px,-20px);
 }
 .button:hover .topic{
 	opacity: 1;
 }
 .button:active .icon{
+	-webkit-transform: scale(1.2,0.8);
 	transform: scale(1.2,0.8);
 }
 .topic{
@@ -1099,6 +1107,7 @@ p {
 }
 .navLi:hover .navImg{
 	stroke: $cinnabarRed;
+	-webkit-transform: translate(0px,-10px);
 	transform: translate(0px,-10px);
 }
 .navLi:hover .navText{
@@ -1112,6 +1121,7 @@ p {
 	opacity:0.5;
 }
 .navLi:active .navImg{
+	-webkit-transform: translate(0px,2px);
 	transform: translate(0px,2px);
 }
 .smalllogo{

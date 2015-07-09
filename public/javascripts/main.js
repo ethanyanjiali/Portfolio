@@ -62,6 +62,7 @@ $("#skillsIcon").click(function(){
 $("#close").click(function(){
 	var flyOut = $(window).height()*0.7;
 	$("#mail").css({
+		"-webkit-transform":"translate(0,"+flyOut+"px)",
 		"transform":"translate(0,"+flyOut+"px)",
 		"opacity":"0",
 		"visibility":"hidden",
@@ -114,6 +115,7 @@ function showContact(){
 		});
 		setTimeout(function(){
 			$("#mail").css({
+				"-webkit-transform":"translate(0,-"+flyIn+"px)",
 				"transform":"translate(0,-"+flyIn+"px)",
 				"opacity":"1",
 				"visibility":"visible",
