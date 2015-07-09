@@ -5,18 +5,17 @@
 *	Thanks for W3Schools and SASS
 */
 body {
-  margin: 0px; }
+  margin: 0px;
+  overflow-x: hidden; }
 
 h1 {
-  font-family: "Eras ITC", "Eras Light ITC", sans-serif;
+  font-family: 'Eras Bold';
   font-size: 2em;
-  font-weight: bold;
   color: #191B28; }
 
 h2 {
-  font-family: "Eras ITC", "Eras Light ITC", sans-serif;
+  font-family: 'Eras Bold';
   font-size: 1em;
-  font-weight: bold;
   color: #191B28; }
 
 h3 {
@@ -27,10 +26,21 @@ h3 {
   font-weight: normal; }
 
 p {
-  font-family: "Eras ITC", "Eras Light ITC", sans-serif;
+  font-family: 'Eras Light';
+  font-weight: bold;
   font-size: 0.9em;
-  color: #191B28; }
+  color: #191B28;
+  letter-spacing: 0.05em; }
 
+@font-face {
+  font-family: 'Impact';
+  src: url("/font/impact.ttf"); }
+@font-face {
+  font-family: 'Eras Bold';
+  src: url("/font/eras_bold.ttf"); }
+@font-face {
+  font-family: 'Eras Light';
+  src: url("/font/eras.ttf"); }
 .contentContainer {
   transition: all 1s ease;
   opacity: 0; }
@@ -67,10 +77,14 @@ p {
   border-width: 0.1em; }
 
 .cover {
+  overflow-x: hidden;
   padding-top: 7%; }
 
 .coverImg {
   width: 100%; }
+
+.coverImgMobile {
+  display: none; }
 
 .title {
   padding: 30px 0 0px 0;
@@ -84,17 +98,99 @@ p {
 /***********************/
 /*Responsive           */
 /***********************/
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1380px) {
+  .msg1 {
+    font-size: 1.1em; }
+
+  .msg2 {
+    font-size: 1.1em; } }
+@media only screen and (max-width: 975px) {
   #mail {
-    width: 80% !important;
+    width: 74% !important;
     top: 80% !important;
-    left: 10% !important; }
+    left: 13% !important; }
+
+  /*	.projImg.right {
+  		margin-right:5% !important;
+  	}
+  	.projContent.right{
+  		margin-right:5% !important;
+  	}*/
+  .msg1 {
+    font-size: 1em; }
+
+  .msg2 {
+    font-size: 1em; } }
+@media only screen and (max-width: 767px) {
+  /*	.topic{
+  		display: none;
+  	}
+  	.icon{
+  		margin-right: 10% !important;
+  		margin-left: 10% !important;
+  	}
+  	.loaderImg{
+  		max-width: 200px !important;
+  		width:20% !important;
+  	}
+  	#mail {
+  		width:80% !important;
+  		top:80% !important;
+  		left:10% !important;
+  	}
+  	.projectsIcons{
+  		left:0% !important;
+  		width:100%;
+  		margin: auto !important;
+  		margin-top:5% !important;
+  	}
+  	.icons {
+  		margin-top:5% !important;
+  	}*/
+  .intro.caption {
+    margin-top: 5px !important;
+    margin-bottom: 0px !important; }
+
+  .name {
+    padding: 0px 0 10px 0 !important; }
+
+  .loaderContainer {
+    top: 100px !important; }
 
   .projectsIcons {
-    margin-top: 5% !important; }
+    margin-top: 6% !important; }
 
   .icons {
-    margin-top: 5% !important; }
+    margin-top: 6% !important; }
+
+  .logo {
+    height: 115px !important;
+    left: 50% !important;
+    position: absolute;
+    margin: 0 0 0 -100px !important; }
+
+  .logoImg {
+    width: 200px !important; }
+
+  .navImg {
+    width: 35px !important;
+    height: 35px !important; }
+
+  .navLi.left {
+    margin-left: 5% !important; }
+
+  .navLi.right {
+    margin-right: 5% !important; }
+
+  .navLi {
+    margin-top: 0px !important;
+    width: 25% !important; }
+
+  .navContainer {
+    height: 77px !important; }
+
+  .cover {
+    padding-top: 2% !important; }
 
   .viewSkills {
     margin-top: 5% !important; }
@@ -102,27 +198,26 @@ p {
   .skillset {
     display: none; }
 
+  .homeWrapper {
+    margin-top: 0 !important; }
+
   .intro.caption {
-    margin-bottom: 20% !important; }
-
-  .intro.myname {
-    margin-top: 20% !important; }
-
-  .homeCoverImg {
-    padding-top: 5% !important; }
+    font-size: 1em !important; }
 
   .title {
-    margin-top: 15% !important;
-    margin-bottom: 20% !important; }
+    margin-top: 0 !important;
+    margin-bottom: 0 !important; }
 
   .loader {
-    margin-top: 20% !important; }
+    margin-top: 5% !important; }
 
   .footerLink.blog {
     display: none !important; }
 
   .aboutText {
-    margin: 0 !important; }
+    max-width: 100%;
+    margin: 0 !important;
+    max-width: 100% !important; }
 
   .amazonImg {
     padding-top: 25px !important;
@@ -194,65 +289,170 @@ p {
     padding-top: 10px;
     left: 50% !important;
     margin-left: -150px;
-    top: 90% !important; }
+    top: 80% !important; }
 
   .verticalIcons2 {
     padding-top: 10px;
     margin-left: -200px;
     left: 50% !important;
-    top: 90% !important; }
-
-  .logo {
-    height: 115px;
-    left: 50%;
-    position: absolute;
-    margin: 30px 0 0 -75px !important; }
-
-  .logoImg {
-    width: 150px !important;
-    height: 62px !important; }
+    top: 80% !important; }
 
   .msg1 {
-    font-size: 1em; }
+    font-size: 1.0em !important; }
 
   .msg2 {
     display: none; } }
-@media only screen and (min-width: 768px) and (max-width: 975px) {
-  #mail {
-    width: 74% !important;
-    top: 80% !important;
-    left: 13% !important; }
-
-  .projImg.right {
-    margin-right: 5% !important; }
-
-  .projContent.right {
-    margin-right: 5% !important; }
-
+@media only screen and (max-width: 580px) {
   .msg1 {
-    font-size: 1em; }
+    font-size: 0.5em !important; }
 
   .msg2 {
-    font-size: 1em; } }
-@media only screen and (min-width: 1090px) and (max-width: 1380px) {
+    display: none; } }
+@media only screen and (max-width: 479px) {
   .msg1 {
-    font-size: 1.1em; }
+    display: none; }
 
-  .msg2 {
-    font-size: 1.1em; } }
-@media only screen and (min-width: 1381px) {
-  .msg1 {
-    font-size: 1.4em; }
+  .projIcon {
+    margin-right: 10px !important;
+    vertical-align: sub !important; }
 
-  .msg2 {
-    font-size: 1.4em; } }
+  .icon {
+    margin: 0 10px !important; }
+
+  .verticalIcon {
+    margin-left: 5px !important;
+    margin-right: 5px !important; }
+
+  .verticalIcons2 {
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-left: -134px !important;
+    top: 85% !important; }
+
+  .verticalIcons1 {
+    margin-left: -98px !important;
+    top: 85% !important; }
+
+  .projectsIcons {
+    margin-left: -155px  !important;
+    margin-top: 40% !important; }
+
+  .icons {
+    margin-left: -113px  !important;
+    margin-top: 40% !important; }
+
+  .char7 {
+    display: block !important; }
+
+  .intro.myname {
+    padding-top: 15px !important; }
+
+  .intro.caption {
+    height: 40px !important; }
+
+  .name {
+    padding: 15px 0 30px 0 !important; }
+
+  .homeCoverImgMobile {
+    padding-top: 5%;
+    display: block !important; }
+
+  .homeCoverImg {
+    display: none; }
+
+  .skillsContent {
+    margin-top: 0px !important; }
+
+  #skillmap .skills-sunburst {
+    margin-top: -90px !important;
+    margin-left: -160px !important; }
+
+  .coverImg {
+    display: none; }
+
+  .coverImgMobile {
+    width: 100%;
+    padding-top: 20%;
+    display: block; }
+
+  .coverImgMobile.cornell {
+    padding-top: 30% !important; }
+
+  .cover {
+    padding-top: 30% !important; }
+
+  .viewSkills {
+    margin-top: 5% !important; }
+
+  .loaderContainer {
+    top: 80px !important; }
+
+  .loader {
+    margin-top: 15% !important; }
+
+  .logo {
+    display: none; }
+
+  .navUl {
+    display: none !important; }
+
+  .navContainer {
+    height: 50px !important; }
+
+  .menu {
+    padding: 9px;
+    display: block !important;
+    float: right;
+    min-width: 30px;
+    height: 30px; }
+
+  .smalllogo {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    padding-top: 5px;
+    width: 10%;
+    min-width: 50px;
+    height: 40px;
+    display: block !important; }
+
+  .footerLink {
+    margin-left: 2% !important;
+    margin-right: 2% !important; }
+
+  .portrait {
+    width: 100% !important; }
+
+  .portraitImg {
+    float: left !important;
+    display: inline-block !important;
+    width: 40% !important;
+    margin-left: 10% !important; }
+
+  .contactIcons {
+    width: 40%;
+    float: right !important;
+    display: inline-block !important;
+    margin-left: 0px !important;
+    margin-right: 8% !important; }
+
+  .contactIcon {
+    width: 40% !important; }
+
+  .loaderImg {
+    max-width: 150px !important;
+    width: 30% !important; }
+
+  .msg3 {
+    display: block !important; } }
 /***********************/
 /*CSS for Footer       */
 /***********************/
 .likes {
   background-color: white;
   color: #004563;
-  font-weight: bold;
+  font-family: 'Eras Bold';
+  font-weight: normal;
   border-radius: 10px;
   transition: all 0.3s ease; }
 
@@ -276,7 +476,8 @@ p {
 
 .footer {
   display: none;
-  font-family: "Eras ITC", "Eras Light ITC", sans-serif;
+  font-family: 'Eras Light';
+  font-weight: bold;
   color: white;
   width: 100%;
   height: 100px;
@@ -286,6 +487,13 @@ p {
 /***********************/
 /*CSS for Contact Page */
 /***********************/
+.msg3 {
+  display: none;
+  position: absolute;
+  top: 50%;
+  color: white;
+  transition: all 0.3s ease; }
+
 #contact {
   visibility: hidden;
   position: absolute;
@@ -559,14 +767,14 @@ p {
 
 .location {
   display: inline-block;
-  font-family: "Eras ITC", "Eras Light ITC", sans-serif;
+  font-family: "Eras ITC", sans-serif;
   font-size: 0.8em;
   color: #191B28;
   margin-right: 50px; }
 
 .duration {
   display: inline-block;
-  font-family: "Eras ITC", "Eras Light ITC", sans-serif;
+  font-family: "Eras ITC", sans-serif;
   font-size: 0.8em;
   color: #191B28; }
 
@@ -631,6 +839,11 @@ p {
   width: 100%;
   animation: homeAni 3s; }
 
+.homeCoverImgMobile {
+  display: none;
+  width: 100%;
+  animation: homeAni 3s; }
+
 .intro {
   display: block;
   margin: auto;
@@ -642,13 +855,15 @@ p {
 .intro.caption {
   margin-top: 20px;
   margin-bottom: 50px;
-  font-family: "Eras ITC", "Eras Light ITC", sans-serif;
+  font-family: 'Eras Light';
+  font-weight: bold;
   opacity: 1;
   animation: caption 0.5s 1s ease-in;
   font-size: 2em; }
 
 .intro.myname {
-  font-family: "Eras ITC", "Eras Light ITC", sans-serif;
+  font-family: 'Eras Light';
+  font-weight: bold;
   animation: myname 0.5s 1s ease-in;
   font-size: 2em; }
 
@@ -963,5 +1178,31 @@ p {
 
 .navLi:active .navImg {
   transform: translate(0px, 2px); }
+
+.smalllogo {
+  display: none; }
+
+.menu {
+  display: none; }
+
+.popup {
+  position: absolute;
+  right: 0px;
+  top: 52px;
+  display: none;
+  background-image: url("/images/popup4.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 200px;
+  width: 150px;
+  text-align: center;
+  z-index: 1005; }
+
+.popupOption {
+  display: block;
+  padding-top: 27px;
+  font-size: 1em;
+  color: white;
+  font-family: "Eras Bold"; }
 
 /*# sourceMappingURL=main.css.map */

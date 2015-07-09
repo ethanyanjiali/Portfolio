@@ -10,17 +10,23 @@
 .skillsContent {
   margin-top: 40px;
   height:600px;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
 }
 #skillmap .skills-wrapper {
+  
   margin-top: 10px;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 #skillmap .skills-sunburst {
-  position: absolute;
-  left:50%;
-  margin:-80px 0 0 -290px;
+  position: static;
+  width: 1%;
+  margin-top: -50px;
+  margin-left: -280px;
+  padding-left: 50%;
 }
 #skillmap .skills-sunburst svg {
+  
   font: 11px "Eras ITC", "Eras Light ITC",  sans-serif;
   font-weight: 900;
   cursor: pointer;

@@ -2,7 +2,42 @@
 var captionTimer;
 var data = {};
 var cache = {};
-// Navigation Bar JS
+// Popup Menu JS
+$("#aboutPop").click(function(){
+	$(window).unbind('scroll');
+	$(".popup").css("display","none");
+	menuOn = false;
+	$("#content").load("/about",data);
+});
+
+$("#projectsPop").click(function(){
+	$(window).unbind('scroll');
+	$(".popup").css("display","none");
+	menuOn = false;
+	$("#content").load("/projects",data);
+});
+
+$("#skillsPop").click(function(){
+	$(window).unbind('scroll');
+	$(".popup").css("display","none");
+	menuOn = false;
+	$("#content").load("/skills",data);
+});
+
+$("#smalllogo").click(function(){
+	$(window).unbind('scroll');
+	$(".popup").css("display","none");
+	menuOn = false;
+	$("#content").load("/home",data);
+});
+
+$("#contactPop").click(function(){
+	$(".popup").css("display","none");
+	menuOn = false;
+	showContact();
+});
+
+//Nav Bar
 $("#aboutIcon").click(function(){
 	$(window).unbind('scroll');
 	$("#content").load("/about",data);
@@ -17,6 +52,7 @@ $("#skillsIcon").click(function(){
 	$(window).unbind('scroll');
 	$("#content").load("/skills",data);
 });
+
 $("#close").click(function(){
 	var flyOut = $(window).height()*0.7;
 	$("#mail").css({
@@ -46,7 +82,7 @@ $("#close").click(function(){
 		})
 	},300)
 })
-$("#contactIcon").click(function(){
+function showContact(){
 	var flyIn = $(window).height()*0.7;
 	$("#contact").css({
 			"opacity":"0.8",
@@ -78,6 +114,9 @@ $("#contactIcon").click(function(){
 			})
 		},200)
 	},100)
+}
+$("#contactIcon").click(function(){
+	showContact();
 });
 
 $("#yanjiaIcon").click(function(){
@@ -148,4 +187,18 @@ $("#like").click(function(){
 			$("#like").html("<span class='likes'>&nbsp;"+likes+"&nbsp;</span>&nbsp;&nbsp;People Liked It!");
 		});
 	}
+})
+
+var menuOn = false;
+$(".menu").click(function(){
+	if(!menuOn){
+		$(".popup").css({
+			"display":"block"
+		})
+		menuOn = true;
+	} else {
+		$(".popup").css("display","none");
+		menuOn = false;
+	}
+	
 })
