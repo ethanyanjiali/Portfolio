@@ -10,7 +10,7 @@ var hbs = exphbs.create();
 var routes = require('./routes/index');
 var mongoose = require('mongoose');
 var app = express();
-var port = process.env.PORT || 3030;
+var port = process.env.PORT || 80;
 
 // view engine setup
 app.engine('handlebars', hbs.engine);
