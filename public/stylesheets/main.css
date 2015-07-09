@@ -884,82 +884,82 @@ p {
   padding-top: 5%; }
 
 .char1 {
-  -webkit-animation: nameAni1 4s;
+  -webkit-animation: nameAni1 20s;
   -webkit-animation-delay: 1.1s;
   -webkit-animation-fill-mode: forwards;
-  animation: nameAni1 4s;
+  animation: nameAni1 20s;
   animation-delay: 1.1s;
   animation-fill-mode: forwards;
   visibility: hidden; }
 
 .char2 {
-  -webkit-animation: nameAni2 4s;
+  -webkit-animation: nameAni2 20s;
   -webkit-animation-delay: 1.2s;
   -webkit-animation-fill-mode: forwards;
-  animation: nameAni2 4s;
+  animation: nameAni2 20s;
   animation-delay: 1.2s;
   animation-fill-mode: forwards;
   visibility: hidden; }
 
 .char3 {
-  -webkit-animation: nameAni3 4s;
+  -webkit-animation: nameAni3 20s;
   -webkit-animation-delay: 1.3s;
   -webkit-animation-fill-mode: forwards;
-  animation: nameAni3 4s;
+  animation: nameAni3 20s;
   animation-delay: 1.3s;
   animation-fill-mode: forwards;
   visibility: hidden; }
 
 .char4 {
-  -webkit-animation: nameAni4 4s;
+  -webkit-animation: nameAni4 20s;
   -webkit-animation-delay: 1.4s;
   -webkit-animation-fill-mode: forwards;
-  animation: nameAni4 4s;
+  animation: nameAni4 20s;
   animation-delay: 1.4s;
   animation-fill-mode: forwards;
   visibility: hidden; }
 
 .char5 {
-  -webkit-animation: nameAni5 4s;
+  -webkit-animation: nameAni5 20s;
   -webkit-animation-delay: 1.5s;
   -webkit-animation-fill-mode: forwards;
-  animation: nameAni5 4s;
+  animation: nameAni5 20s;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
   visibility: hidden; }
 
 .char6 {
-  -webkit-animation: nameAni6 4s;
+  -webkit-animation: nameAni6 20s;
   -webkit-animation-delay: 1.6s;
   -webkit-animation-fill-mode: forwards;
-  animation: nameAni6 4s;
+  animation: nameAni6 20s;
   animation-delay: 1.6s;
   animation-fill-mode: forwards;
   visibility: hidden; }
 
 .char7 {
-  -webkit-animation: nameAni7 4s;
+  -webkit-animation: nameAni7 20s;
   -webkit-animation-delay: 1.7s;
   -webkit-animation-fill-mode: forwards;
-  animation: nameAni7 4s;
+  animation: nameAni7 20s;
   animation-delay: 1.7s;
   animation-fill-mode: forwards;
   visibility: hidden; }
 
 .char8 {
-  -webkit-animation: nameAni8 4s;
+  -webkit-animation: nameAni8 20s;
   -webkit-animation-delay: 1.8s;
   -webkit-animation-fill-mode: forwards;
-  animation: nameAni8 4s;
+  animation: nameAni8 20s;
   animation-delay: 1.8s;
   animation-fill-mode: forwards;
   visibility: hidden; }
 
 .char9 {
-  -webkit-animation: nameAni9 4s;
+  -webkit-animation: nameAni9 20s;
   -webkit-animation-delay: 1.9s;
   -webkit-animation-fill-mode: forwards;
-  animation: nameAni9 4s;
+  animation: nameAni9 20s;
   animation-delay: 1.9s;
   animation-fill-mode: forwards;
   visibility: hidden; }
