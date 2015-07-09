@@ -147,6 +147,51 @@ p {
   	.icons {
   		margin-top:5% !important;
   	}*/
+  .char1 {
+    -webkit-animation: none !important;
+    animation: none !important;
+    visibility: visible !important; }
+
+  .char2 {
+    -webkit-animation: none !important;
+    animation: none !important;
+    visibility: visible !important; }
+
+  .char3 {
+    -webkit-animation: none !important;
+    animation: none !important;
+    visibility: visible !important; }
+
+  .char4 {
+    -webkit-animation: none !important;
+    animation: none !important;
+    visibility: visible !important; }
+
+  .char5 {
+    -webkit-animation: none !important;
+    animation: none !important;
+    visibility: visible !important; }
+
+  .char6 {
+    -webkit-animation: none !important;
+    animation: none !important;
+    visibility: visible !important; }
+
+  .char7 {
+    -webkit-animation: none !important;
+    animation: none !important;
+    visibility: visible !important; }
+
+  .char8 {
+    -webkit-animation: none !important;
+    animation: none !important;
+    visibility: visible !important; }
+
+  .char9 {
+    -webkit-animation: none !important;
+    animation: none !important;
+    visibility: visible !important; }
+
   .intro.caption {
     margin-top: 5px !important;
     margin-bottom: 0px !important; }
@@ -877,7 +922,8 @@ p {
   color: #004563;
   font-family: "Impact";
   font-size: 5em;
-  text-shadow: 5px 5px 10px #CCCCCC; }
+  text-shadow: 5px 5px 10px #CCCCCC;
+  letter-spacing: .1em; }
 
 .homePage {
   padding-top: 5%; }
