@@ -184,6 +184,13 @@ p {
 	.icons {
 		margin-top:5% !important;
 	}*/
+	@for $i from 1 through 9 {
+		.char#{$i}{
+			-webkit-animation: none !important;
+			animation: none !important; 
+			visibility: visible !important;
+		}
+	}
 	.intro.caption{
 		margin-top: 5px !important;
 		margin-bottom: 0px !important;
