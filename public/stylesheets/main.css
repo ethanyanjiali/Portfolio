@@ -98,12 +98,34 @@ p {
 /***********************/
 /*Responsive           */
 /***********************/
-@media only screen and (max-width: 1380px) {
+@media only screen and (min-width: 2000px) {
+  .navBar {
+    max-width: 1500px !important; }
+
   .msg1 {
-    font-size: 1.1em; }
+    font-size: 3em !important; }
 
   .msg2 {
-    font-size: 1.1em; } }
+    font-size: 3em !important; } }
+@media only screen and (min-width: 1381px) {
+  .navImg {
+    width: 60px !important;
+    height: 60px !important; }
+
+  .navBar {
+    max-width: 1200px !important; }
+
+  .msg1 {
+    font-size: 1.5em !important; }
+
+  .msg2 {
+    font-size: 1.5em !important; } }
+@media only screen and (max-width: 1380px) {
+  .msg1 {
+    font-size: 1.1em !important; }
+
+  .msg2 {
+    font-size: 1.1em !important; } }
 @media only screen and (max-width: 975px) {
   #mail {
     width: 74% !important;
@@ -117,10 +139,10 @@ p {
   		margin-right:5% !important;
   	}*/
   .msg1 {
-    font-size: 1em; }
+    font-size: 1em !important; }
 
   .msg2 {
-    font-size: 1em; } }
+    font-size: 1em !important; } }
 @media only screen and (max-width: 767px) {
   /*	.topic{
   		display: none;
@@ -527,6 +549,8 @@ p {
   margin: auto;
   opacity: 0;
   z-index: 1001;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in; }
   #mail:before {
     display: block;
@@ -603,6 +627,8 @@ p {
   width: 100%;
   max-height: 50px;
   max-width: 50px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
   -webkit-filter: drop-shadow(5px 5px 5px #BBBBBB);
   filter: drop-shadow(5px 5px 5px #BBBBBB); }
@@ -675,6 +701,8 @@ p {
   min-width: 250px;
   max-width: 400px;
   vertical-align: top;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease; }
 
 .projIcon {
@@ -705,6 +733,8 @@ p {
   position: absolute;
   text-align: center;
   left: 50%;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
   margin-left: -75px;
   margin-top: 10%; }
@@ -744,6 +774,8 @@ p {
   z-index: 1; }
 
 .verticalButton {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
   margin-bottom: 40px; }
 
@@ -836,6 +868,8 @@ p {
   width: 100%;
   max-height: 50px;
   max-width: 50px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
   -webkit-filter: drop-shadow(5px 5px 5px #BBBBBB);
   filter: drop-shadow(5px 5px 5px #BBBBBB); }
@@ -1277,6 +1311,8 @@ p {
   display: block;
   width: 300px;
   height: 115px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background-image: url("/images/yanjia_logo.png");
   background-size: 100%;

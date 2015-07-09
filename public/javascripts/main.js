@@ -136,6 +136,9 @@ var isLike = false;
 var liked = false;
 function startLoader(){
 	if(!isLike){
+		$(".footer").css({
+			"display":"none"
+		});
 		$(".loaderContainer").css({
 		"visibility":"visible"
 		})
