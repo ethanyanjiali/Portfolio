@@ -1,3 +1,9 @@
+/*
+*	Main Js for Yanjia Li's portfolio
+*	Created on July 2015
+*	Author Yanjia Li
+*/
+
 // Variables
 var captionTimer;
 var data = {};

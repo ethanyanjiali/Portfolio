@@ -1,7 +1,7 @@
 /*
 *	Style sheet for Yanjia Li's portfolio
 *	Created on July 2015
-*	Author by Yanjia Li
+*	Author Yanjia Li
 *	Thanks for W3Schools and SASS
 */
 
@@ -459,8 +459,8 @@ p {
 		display: block !important;
 	}
 	.footerLink{
-		margin-left:2%!important;
-		margin-right:2%!important;
+		margin-left:0 !important;
+		margin-right:0 !important;
 	}
 	.portrait{
 		width:100%!important;
@@ -804,14 +804,14 @@ p {
 }
 .location{
 	display: inline-block;
-	font-family: $textFont;
+	font-family: "Eras Light";
 	font-size: 0.8em;
 	color:$midnightExpress;
 	margin-right: 50px;
 }
 .duration{
 	display: inline-block;
-	font-family: $textFont;
+	font-family: "Eras Light";
 	font-size: 0.8em;
 	color:$midnightExpress;
 }
@@ -879,11 +879,13 @@ p {
 /***********************/
 .homeCoverImg{
 	width:100%;
+	-webkit-animation: homeAni 3s;
 	animation: homeAni 3s;
 }
 .homeCoverImgMobile{
 	display: none;
 	width:100%;
+	-webkit-animation: homeAni 3s;
 	animation: homeAni 3s;
 }
 .intro{
@@ -925,6 +927,9 @@ p {
 }
 @for $i from 1 through 9 {
 	.char#{$i}{
+		-webkit-animation: nameAni+$i 4s; 
+		-webkit-animation-delay: (1+$i/10)+s;
+		-webkit-animation-fill-mode: forwards;
 		animation: nameAni+$i 4s; 
 		animation-delay: (1+$i/10)+s;
 		animation-fill-mode: forwards;
