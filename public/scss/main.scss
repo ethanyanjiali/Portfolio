@@ -927,10 +927,10 @@ p {
 }
 @for $i from 1 through 9 {
 	.char#{$i}{
-		-webkit-animation: nameAni+$i 4s; 
+		-webkit-animation: nameAni+$i 20s; 
 		-webkit-animation-delay: (1+$i/10)+s;
 		-webkit-animation-fill-mode: forwards;
-		animation: nameAni+$i 4s; 
+		animation: nameAni+$i 20s; 
 		animation-delay: (1+$i/10)+s;
 		animation-fill-mode: forwards;
 		visibility: hidden;
