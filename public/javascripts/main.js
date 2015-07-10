@@ -3,23 +3,10 @@
 *	Created on July 2015
 *	Author Yanjia Li
 */
-function goFullscreen(){
-	var i = document.body;
- 
-	// go full-screen
-	if (i.requestFullscreen) {
-	    i.requestFullscreen();
-	} else if (i.webkitRequestFullscreen) {
-	    i.webkitRequestFullscreen();
-	} else if (i.mozRequestFullScreen) {
-	    i.mozRequestFullScreen();
-	} else if (i.msRequestFullscreen) {
-	    i.msRequestFullscreen();
-	}
-}
-
-$(document).on('click', function(){
-    goFullscreen();
+window.addEventListener("load",function() {
+	setTimeout(function(){
+		window.scrollTo(0, 1);
+	}, 0);
 });
 
 // Variables
