@@ -11,7 +11,9 @@ var cache = {};
 // Popup Menu JS
 $("#aboutPop").click(function(){
 	$(window).unbind('scroll');
-	$(".popup").css("display","none");
+	$(".popup").css({
+		"display":"none",
+	});
 	menuOn = false;
 	$("#content").load("/about",data);
 });
@@ -68,9 +70,10 @@ $("#close").click(function(){
 		"visibility":"hidden",
 	})
 	setTimeout(function(){
+		$("#main").toggleClass('transformHide');
 		$("#main").css({
-			"-webkit-transform":"scale(1,1)",
-			"transform":"scale(1,1)",
+			// "-webkit-transform":"scale3d(1,1,1)",
+			// "transform":"scale3d(1,1,1)",
 			"-webkit-filter": "blur(0px)",
 		    "-moz-filter": "blur(0px)",
 		    "-o-filter": "blur(0px)",
@@ -95,20 +98,21 @@ function showContact(){
 			"opacity":"0.8",
 			"visibility":"visible"
 		})
-	$("#main").css({
-		"-webkit-transform":"scale(0.9,0.9)",
-		"transform":"scale(0.9,0.9)"
-	});
+	$("#main").toggleClass('transformHide');
+	// $("#main").css({
+	// 	"-webkit-transform":"scale3d(0.9,0.9,1)",
+	// 	"transform":"scale3d(0.9,0.9,1)"
+	// });
 	$("#mail").css({
 		"display":"block"
 	})
 	setTimeout(function(){
 		$("#main").css({
-		"-webkit-filter": "blur(15px)",
-	    "-moz-filter": "blur(15px)",
-	    "-o-filter": "blur(15px)",
-	    "-ms-filter": "blur(15px)",
-	    "filter": "blur(15px)"
+		"-webkit-filter": "blur(10px)",
+	    "-moz-filter": "blur(10px)",
+	    "-o-filter": "blur(10px)",
+	    "-ms-filter": "blur(10px)",
+	    "filter": "blur(10px)"
 		})
 		$("body").css({
 			"overflow":"hidden"
@@ -139,6 +143,9 @@ function startLoader(){
 		$(".footer").css({
 			"display":"none"
 		});
+		$("#content").css({
+			"display":"none"
+		});
 		$(".loaderContainer").css({
 		"visibility":"visible"
 		})
@@ -160,6 +167,10 @@ $(document).on({
 	ajaxStart: startLoader,
     ajaxStop: function() {
     	if(!isLike){
+    		window.scrollTo(0, 0);
+	    	$("#content").css({
+				"display":"block"
+			});
     		setTimeout(function(){
 		    	$(".loader").css({
 		    		// "transform":"translate(0px,200px)",
@@ -205,11 +216,17 @@ $(".menu").click(function(){
 	if(!menuOn){
 		$(".popup").css({
 			"display":"block"
-		})
+		});
 		menuOn = true;
 	} else {
 		$(".popup").css("display","none");
 		menuOn = false;
 	}
 	
+})
+$("#content").click(function(){
+	if(menuOn){
+		$(".popup").css("display","none");
+		menuOn = false;
+	}
 })

@@ -48,8 +48,8 @@ p {
 /*display:none conflicts with transition*/
 .loaderContainer {
   visibility: visible;
-  position: absolute;
-  top: 150px;
+  position: fixed;
+  top: 152px;
   width: 100%;
   bottom: 0px;
   background: white;
@@ -99,6 +99,12 @@ p {
 /*Responsive           */
 /***********************/
 @media only screen and (min-width: 2000px) {
+  .title {
+    font-size: 8em !important; }
+
+  .name {
+    font-size: 8em !important; }
+
   .navBar {
     max-width: 1500px !important; }
 
@@ -108,9 +114,30 @@ p {
   .msg2 {
     font-size: 3em !important; } }
 @media only screen and (min-width: 1381px) {
+  h1 {
+    font-size: 120% !important; }
+
+  h2 {
+    font-size: 120% !important; }
+
+  h3 {
+    font-size: 120% !important; }
+
+  p {
+    font-size: 120% !important; }
+
+  .title {
+    font-size: 6em !important; }
+
+  .name {
+    font-size: 6em !important; }
+
   .navImg {
     width: 60px !important;
     height: 60px !important; }
+
+  .navLi {
+    margin-top: 10px !important; }
 
   .navBar {
     max-width: 1200px !important; }
@@ -127,6 +154,21 @@ p {
   .msg2 {
     font-size: 1.1em !important; } }
 @media only screen and (max-width: 975px) {
+  .projContent {
+    width: 55% !important;
+    margin-right: 0% !important; }
+
+  .aboutText {
+    max-width: 80% !important; }
+
+  .projSection {
+    margin-right: 10% !important;
+    margin-left: 15% !important; }
+
+  .aboutSection {
+    margin-right: 10% !important;
+    margin-left: 15% !important; }
+
   #mail {
     width: 74% !important;
     top: 80% !important;
@@ -143,7 +185,7 @@ p {
 
   .msg2 {
     font-size: 1em !important; } }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 800px) {
   /*	.topic{
   		display: none;
   	}
@@ -332,6 +374,9 @@ p {
   .msg2 {
     display: none; } }
 @media only screen and (max-width: 479px) {
+  #wrapper {
+    padding-top: 50px !important; }
+
   .msg1 {
     display: none; }
 
@@ -408,7 +453,7 @@ p {
     margin-top: 5% !important; }
 
   .loaderContainer {
-    top: 80px !important; }
+    top: 85px !important; }
 
   .loader {
     margin-top: 15% !important; }
@@ -420,7 +465,10 @@ p {
     display: none !important; }
 
   .navContainer {
-    height: 50px !important; }
+    height: 50px !important;
+    width: 100% !important;
+    position: fixed !important;
+    z-index: 1006; }
 
   .menu {
     padding: 9px;
@@ -512,14 +560,17 @@ p {
 /***********************/
 .msg3 {
   display: none;
-  position: absolute;
+  position: fixed;
+  margin-left: 3%;
   top: 50%;
+  width: 94%;
   color: white;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  text-align: center; }
 
 #contact {
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   width: 100%;
@@ -534,6 +585,9 @@ p {
   margin: 0;
   padding: 0;
   transition: all 0.2s ease-in; }
+  #main.transformHide {
+    -webkit-transform: scale3d(0.9, 0.9, 1);
+    transform: scale3d(0.9, 0.9, 1); }
 
 #mail {
   display: none;
@@ -543,7 +597,7 @@ p {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   top: 80%;
   left: 20%;
   margin: auto;
@@ -670,18 +724,18 @@ p {
 
 .projImg.right {
   float: right;
-  margin-right: 15%; }
+  margin-right: 10%; }
 
 .projContent.left {
   float: left;
   display: inline-block;
-  width: 45%; }
+  width: 55%; }
 
 .projContent.right {
   float: right;
   display: inline-block;
-  width: 45%;
-  margin-right: 15%; }
+  width: 55%;
+  margin-right: 10%; }
 
 .projTitle {
   display: inline-block;
@@ -1414,7 +1468,7 @@ p {
 
 .popupOption {
   display: block;
-  padding-top: 27px;
+  margin-top: 27px;
   font-size: 1em;
   color: white;
   font-family: "Eras Bold"; }
