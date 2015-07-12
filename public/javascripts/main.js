@@ -13,17 +13,24 @@ window.addEventListener("load",function() {
 var captionTimer;
 var data = {};
 var cache = {};
+function clearButtons(){
+	$("#verticalIconsProj").css("visibility","hidden");
+	$("#verticalIconsAbout").css("visibility","hidden");
+}
 // Popup Menu JS
 $("#aboutPop").click(function(){
+	clearButtons();
 	$(window).unbind('scroll');
 	$(".popup").css({
 		"display":"none",
 	});
 	menuOn = false;
+	
 	$("#content").load("/about",data);
 });
 
 $("#projectsPop").click(function(){
+	clearButtons();
 	$(window).unbind('scroll');
 	$(".popup").css("display","none");
 	menuOn = false;
@@ -31,6 +38,7 @@ $("#projectsPop").click(function(){
 });
 
 $("#skillsPop").click(function(){
+	clearButtons();
 	$(window).unbind('scroll');
 	$(".popup").css("display","none");
 	menuOn = false;
@@ -38,6 +46,7 @@ $("#skillsPop").click(function(){
 });
 
 $("#smalllogo").click(function(){
+	clearButtons();
 	$(window).unbind('scroll');
 	$(".popup").css("display","none");
 	menuOn = false;
@@ -76,6 +85,20 @@ $("#close").click(function(){
 	})
 	setTimeout(function(){
 		$("#main").toggleClass('transformHide');
+		$("#verticalIconsProj").css({
+			"-webkit-filter": "blur(0px)",
+		    "-moz-filter": "blur(0px)",
+		    "-o-filter": "blur(0px)",
+		    "-ms-filter": "blur(0px)",
+		    "filter": "blur(0px)"
+		});
+		$("#verticalIconsAbout").css({
+			"-webkit-filter": "blur(0px)",
+		    "-moz-filter": "blur(0px)",
+		    "-o-filter": "blur(0px)",
+		    "-ms-filter": "blur(0px)",
+		    "filter": "blur(0px)"
+		});
 		$("#main").css({
 			// "-webkit-transform":"scale3d(1,1,1)",
 			// "transform":"scale3d(1,1,1)",
@@ -112,6 +135,20 @@ function showContact(){
 		"display":"block"
 	})
 	setTimeout(function(){
+		$("#verticalIconsProj").css({
+		"-webkit-filter": "blur(10px)",
+	    "-moz-filter": "blur(10px)",
+	    "-o-filter": "blur(10px)",
+	    "-ms-filter": "blur(10px)",
+	    "filter": "blur(10px)"
+		});
+		$("#verticalIconsAbout").css({
+		"-webkit-filter": "blur(10px)",
+	    "-moz-filter": "blur(10px)",
+	    "-o-filter": "blur(10px)",
+	    "-ms-filter": "blur(10px)",
+	    "filter": "blur(10px)"
+		});
 		$("#main").css({
 		"-webkit-filter": "blur(10px)",
 	    "-moz-filter": "blur(10px)",
